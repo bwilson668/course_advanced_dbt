@@ -19,6 +19,15 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
+vars:
+  dbt_project_evaluator:
+    intermediate_prefixes: ['int_', 'dim_']
+
+seeds:
+  dbt_project_evaluator:
+    dbt_project_evaluator_exceptions:
+      +enabled: false
+
 models:
   advanced_dbt:
     +materialized: view
