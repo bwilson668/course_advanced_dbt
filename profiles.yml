@@ -17,7 +17,7 @@ course_advanced_dbt:
       user: '{{ env_var("DBT_ENV_SECRET_USER") }}'
       password: '{{ env_var("DBT_ENV_SECRET_PASSWORD") }}'
       role: transformer
-      database: prod
+      database: dev
       warehouse: transforming
-      schema: dbt
+      schema: dbt_ben_prod
       threads: 4
