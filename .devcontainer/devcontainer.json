@@ -16,7 +16,11 @@
 	"initializeCommand": "touch .env",
 	"runArgs": ["--env-file", ".env"],
 	"secrets":{},
-	"postCreateCommand": "pip install -r requirements.txt",
+	"postCreateCommand": {
+		"pip_install": "pip3 install -r requirements.txt",
+		"script_executable": "chmod -R 755 .devcontainer/scripts",
+		"script_alias": "echo 'alias dbt-state=.devcontainer/scripts/dbtstate.bash' >> ~/.bashrc"
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [

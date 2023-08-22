@@ -9,5 +9,15 @@ course_advanced_dbt:
       role: transformer
       database: dev
       warehouse: transforming
-      schema: '{{ env_var("DBT_ENV_SCHEMA") }}'
+      schema: dbt_ben
+      threads: 4
+    prod:
+      type: snowflake
+      account: efruuit-zh04827
+      user: '{{ env_var("DBT_ENV_SECRET_USER") }}'
+      password: '{{ env_var("DBT_ENV_SECRET_PASSWORD") }}'
+      role: transformer
+      database: prod
+      warehouse: transforming
+      schema: dbt
       threads: 4
