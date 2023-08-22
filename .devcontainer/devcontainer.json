@@ -28,7 +28,8 @@
 				"redhat.vscode-yaml",
 				"innoverio.vscode-dbt",
 				"eamodio.gitlens",
+				"snowflake.snowflake-vsc"
 			]
 		}
-	},
+	}
 }
