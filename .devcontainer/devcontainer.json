@@ -11,6 +11,7 @@
 			"userGid": "automatic"
 		},
 		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/devcontainers/features/python:1": {}
 	},
 	"initializeCommand": "touch .env",
@@ -24,10 +25,12 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"eamodio.gitlens",
+				"github.copilot",
+				"github.copilot-chat",
+				"innoverio.vscode-dbt",
 				"ms-python.python",
 				"redhat.vscode-yaml",
-				"innoverio.vscode-dbt",
-				"eamodio.gitlens",
 				"snowflake.snowflake-vsc"
 			]
 		}
